@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MeuMenuPedido.Application\MeuMenuPedido.Application.csproj" />
+    <ProjectReference Include="..\MeuMenuPedido.Domain\MeuMenuPedido.Domain.csproj" />
+    <ProjectReference Include="..\MeuMenuPedido.Infra.CrossCutting\MeuMenuPedido.Infra.CrossCutting.csproj" />
+  </ItemGroup>
+
+</Project>

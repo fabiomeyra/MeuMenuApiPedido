@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MeuMenuPedido.Application\MeuMenuPedido.Application.csproj" />
+    <ProjectReference Include="..\MeuMenuPedido.Domain\MeuMenuPedido.Domain.csproj" />
+    <ProjectReference Include="..\MeuMenuPedido.Infra.Data\MeuMenuPedido.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>
