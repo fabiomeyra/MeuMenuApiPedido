@@ -9,10 +9,26 @@
   <ItemGroup>
     <Folder Include="Enum\" />
     <Folder Include="Validations\" />
+    <Folder Include="Interfaces\Integracoes\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.5.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Validations\MensagensValidacaoResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MensagensValidacaoResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Validations\MensagensValidacaoResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MensagensValidacaoResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

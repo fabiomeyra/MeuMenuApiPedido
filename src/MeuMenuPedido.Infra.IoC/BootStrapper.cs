@@ -1,11 +1,17 @@
-﻿using MeuMenuPedido.Domain.Interfaces.Context;
+﻿using MeuMenuPedido.Application.AppServices;
+using MeuMenuPedido.Application.Interfaces;
+using MeuMenuPedido.Domain.Interfaces.Context;
 using MeuMenuPedido.Domain.Interfaces.Notificador;
+using MeuMenuPedido.Domain.Interfaces.Repositories;
+using MeuMenuPedido.Domain.Interfaces.Services;
 using MeuMenuPedido.Domain.Notificador;
+using MeuMenuPedido.Domain.Services;
 using MeuMenuPedido.Domain.Services.Base;
 using MeuMenuPedido.Domain.Services.Utils;
 using MeuMenuPedido.Domain.UoW;
 using MeuMenuPedido.Infra.CrossCutting;
 using MeuMenuPedido.Infra.Data.Context;
+using MeuMenuPedido.Infra.Data.Repositories;
 using MeuMenuPedido.Infra.Data.UoW;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
@@ -38,10 +44,16 @@ public static class BootStrapper
         services.AddScoped<IMeuMenuPedidoContext, MeuMenuPedidoContext>();
 
         // appServices
-        
+        services.AddScoped<IPedidoAppService, PedidoAppService>();
+        services.AddScoped<IPedidoProdutoAppService, PedidoProdutoAppService>();
+
         // services
+        services.AddScoped<IPedidoService, PedidoService>();
+        services.AddScoped<IPedidoProdutoService, PedidoProdutoService>();
 
         // repositories
+        services.AddScoped<IPedidoRepository, PedidoRepository>();
+        services.AddScoped<IPedidoProdutoRepository, PedidoProdutoRepository>();
 
         return services;
     }

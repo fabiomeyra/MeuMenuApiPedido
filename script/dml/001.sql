@@ -20,7 +20,7 @@ CREATE TABLE Pedido.Pedido (
 	PedidoMesa int NOT NULL,
 	DataCadastro datetime not null,
 	SituacaoPedidoId int NOT NULL,
-	PedidoObservacao varchar(500),
+	PedidoObservacao varchar(2000),
 )
 GO
 
