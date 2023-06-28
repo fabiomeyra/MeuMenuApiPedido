@@ -1,9 +1,13 @@
 using System.Globalization;
 using System.Text.Json.Serialization;
 using MeuMenuPedido.Api.Helpers;
+using MeuMenuPedido.Api.Infra;
 using MeuMenuPedido.Api.Middlewares;
 using MeuMenuPedido.Infra.CrossCutting.AppSettings;
 using MeuMenuPedido.Infra.IoC;
+using Microsoft.ApplicationInsights.AspNetCore.Extensions;
+using Microsoft.ApplicationInsights.DependencyCollector;
+using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Rewrite;
@@ -43,7 +47,21 @@ builder.Services.Configure<AppSettings>(appSettingsSection);
 
 var configuracao = appSettingsSection.Get<AppSettings>();
 
+// add Applicaiton Insights
+if (configuracao?.ApplicationInsights?.ConnectionString != null)
+{
+    builder.Services.AddApplicationInsightsTelemetry(new ApplicationInsightsServiceOptions
+    {
+        ConnectionString = configuracao.ApplicationInsights.ConnectionString
+    });
+
+    builder.Services.ConfigureTelemetryModule<DependencyTrackingTelemetryModule>((module, _) => { module.EnableSqlCommandTextInstrumentation = true; });
+}
+
 builder.Services.AddSingleton<IAuthorizationMiddlewareResultHandler, AuthorizationMiddleware>();
+builder.Services.AddSingleton<ITelemetryInitializer, TelemetryInitializer>();
+builder.Services.AddSingleton<ApplicationInsightsCore>();
+builder.Services.AddSingleton<ResponseBodyStoringMiddleware>();
 
 builder.Services.AddAuthentication(opt =>
 {
@@ -117,6 +135,10 @@ app.UseAuthorization();
 
 // Adicionando Middleware para tratar exceções
 app.UseExceptionHandlerMiddleware();
+
+app.UseExceptionRequestBodyStringMiddleware();
+
+app.UseResponseBodyStoringMiddleware();
 
 app.UseRequestLocalization(new RequestLocalizationOptions
 {

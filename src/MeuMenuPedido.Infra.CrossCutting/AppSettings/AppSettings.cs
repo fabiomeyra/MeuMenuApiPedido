@@ -5,5 +5,6 @@ public class AppSettings
     public ConnectionStringAppSettings? ConnectionString { get; set; }
     public ApisSettings? Apis { get; set; }
     public JwtAppSettings? Jwt { get; set; }
+    public ApplicationInsightsAppSettings? ApplicationInsights { get; set; }
     public bool EhAmbienteDeProducao { get; set; }
 }
