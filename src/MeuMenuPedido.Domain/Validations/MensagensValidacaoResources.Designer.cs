@@ -88,6 +88,33 @@ namespace MeuMenuPedido.Domain.Validations {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Não foi possível identificar o pedido.
+        /// </summary>
+        internal static string PedidoNaoEncontrado {
+            get {
+                return ResourceManager.GetString("PedidoNaoEncontrado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não é possível alterar a situação de pedido que está pago ou cancelado.
+        /// </summary>
+        internal static string PedidoPagoOuCanceladoNaoPodeMudarSituacao {
+            get {
+                return ResourceManager.GetString("PedidoPagoOuCanceladoNaoPodeMudarSituacao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O produto informado não foi localizado no serviço de produtos, favor verificar e tentar novamente.
+        /// </summary>
+        internal static string ProdutoNaoLocalizado {
+            get {
+                return ResourceManager.GetString("ProdutoNaoLocalizado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Deve-se obrigatoriamente informar o produto.
         /// </summary>
         internal static string ProdutoObrigatorio {
@@ -102,6 +129,24 @@ namespace MeuMenuPedido.Domain.Validations {
         internal static string QuantidadeDoProdutoDeveSerSuperiorAZero {
             get {
                 return ResourceManager.GetString("QuantidadeDoProdutoDeveSerSuperiorAZero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A situação informada para o pedido é inválida.
+        /// </summary>
+        internal static string SituacaoPedidoInvalida {
+            get {
+                return ResourceManager.GetString("SituacaoPedidoInvalida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O usuário não possui permissão para executar essa ação.
+        /// </summary>
+        internal static string UsuarioSemPermissao {
+            get {
+                return ResourceManager.GetString("UsuarioSemPermissao", resourceCulture);
             }
         }
     }

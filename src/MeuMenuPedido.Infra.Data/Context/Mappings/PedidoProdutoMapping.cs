@@ -27,12 +27,14 @@ public class PedidoProdutoMapping : IEntityTypeConfiguration<PedidoProduto>
             .HasColumnType("int")
             .IsRequired();
 
+        builder.Ignore(x => x.Produto);
+
         // Relacionamento
         builder.HasOne(x => x.Pedido)
             .WithMany(x => x.ProdutosDoPedido)
             .HasForeignKey(x => x.PedidoId);
 
         //  Table
-        builder.ToTable("Pedido", "PedidoProduto");
+        builder.ToTable("PedidoProduto", "Pedido");
     }
 }

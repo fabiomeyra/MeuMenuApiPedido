@@ -1,4 +1,6 @@
-﻿namespace MeuMenuPedido.Application.ViewModels;
+﻿using MeuMenuPedido.Application.ViewModels.Produto;
+
+namespace MeuMenuPedido.Application.ViewModels.Pedido;
 
 public class PedidoProdutoViewModel
 {
@@ -7,4 +9,5 @@ public class PedidoProdutoViewModel
     public decimal ProdutoValor { get; set; }
     public int ProdutoQuantidade { get; set; }
     public virtual PedidoViewModel? Pedido { get; set; }
+    public ProdutoDescricaoImagemViewModel? Produto { get; set; }
 }

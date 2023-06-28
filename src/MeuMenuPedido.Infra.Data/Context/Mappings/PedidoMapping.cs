@@ -26,6 +26,8 @@ public class PedidoMapping : IEntityTypeConfiguration<Pedido>
         builder.Property(x => x.PedidoObservacao)
             .HasColumnType("varchar(2000)");
 
+        builder.Ignore(x => x.ValorTotal);
+
         //  Table
         builder.ToTable("Pedido", "Pedido");
     }

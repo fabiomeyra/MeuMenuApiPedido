@@ -18,7 +18,7 @@ public class AdicionarPedidoValidation : AbstractValidator<Models.Pedido>
             .WithMessage(RetornaMensagemFormatado(MensagensValidacaoResources.DeveInformarProdutoNoPedido));
 
         RuleForEach(x => x.ProdutosDoPedido)
-            .SetValidator(x => new AdicionarPedidoProdutoValidation())
+            .SetValidator(x => new AdicionarPedidoProdutoValidation(true))
             .When(x => x.ProdutosDoPedido.Any());
     }
 

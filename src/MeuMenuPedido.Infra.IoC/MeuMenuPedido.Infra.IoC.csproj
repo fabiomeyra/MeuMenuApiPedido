@@ -16,6 +16,7 @@
     <ProjectReference Include="..\MeuMenuPedido.Application\MeuMenuPedido.Application.csproj" />
     <ProjectReference Include="..\MeuMenuPedido.Domain\MeuMenuPedido.Domain.csproj" />
     <ProjectReference Include="..\MeuMenuPedido.Infra.Data\MeuMenuPedido.Infra.Data.csproj" />
+    <ProjectReference Include="..\MeuMenuPedido.Integracoes\MeuMenuPedido.Integracoes.csproj" />
   </ItemGroup>
 
 </Project>

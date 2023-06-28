@@ -132,4 +132,19 @@
   <data name="QuantidadeDoProdutoDeveSerSuperiorAZero" xml:space="preserve">
     <value>Deve-se informar a quantidade do produto superior a zero</value>
   </data>
+  <data name="ProdutoNaoLocalizado" xml:space="preserve">
+    <value>O produto informado não foi localizado no serviço de produtos, favor verificar e tentar novamente</value>
+  </data>
+  <data name="PedidoPagoOuCanceladoNaoPodeMudarSituacao" xml:space="preserve">
+    <value>Não é possível alterar a situação de pedido que está pago ou cancelado</value>
+  </data>
+  <data name="SituacaoPedidoInvalida" xml:space="preserve">
+    <value>A situação informada para o pedido é inválida</value>
+  </data>
+  <data name="PedidoNaoEncontrado" xml:space="preserve">
+    <value>Não foi possível identificar o pedido</value>
+  </data>
+  <data name="UsuarioSemPermissao" xml:space="preserve">
+    <value>O usuário não possui permissão para executar essa ação</value>
+  </data>
 </root>

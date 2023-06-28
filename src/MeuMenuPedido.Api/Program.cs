@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.IdentityModel.Tokens;
+using AuthorizationMiddleware = MeuMenuPedido.Api.Middlewares.AuthorizationMiddleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,6 +42,8 @@ var appSettingsSection = builder.Configuration.GetSection("AppSettings");
 builder.Services.Configure<AppSettings>(appSettingsSection);
 
 var configuracao = appSettingsSection.Get<AppSettings>();
+
+builder.Services.AddSingleton<IAuthorizationMiddlewareResultHandler, AuthorizationMiddleware>();
 
 builder.Services.AddAuthentication(opt =>
 {

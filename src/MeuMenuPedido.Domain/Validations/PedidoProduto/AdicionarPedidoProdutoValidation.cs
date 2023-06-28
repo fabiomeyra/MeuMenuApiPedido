@@ -4,14 +4,14 @@ namespace MeuMenuPedido.Domain.Validations.PedidoProduto;
 
 public class AdicionarPedidoProdutoValidation : AbstractValidator<Models.PedidoProduto>
 {
-    public AdicionarPedidoProdutoValidation()
+    public AdicionarPedidoProdutoValidation(bool adicionadoJuntoComPedido = false)
     {
         RuleFor(x => x.ProdutoId)
             .Must(x => x != Guid.Empty)
             .WithMessage(RetornaMensagemFormatado(MensagensValidacaoResources.ProdutoObrigatorio));
 
         RuleFor(x => x.PedidoId)
-            .Must(x => x != Guid.Empty)
+            .Must(x => adicionadoJuntoComPedido || x != Guid.Empty)
             .WithMessage(RetornaMensagemFormatado(MensagensValidacaoResources.IdentificadorDoPedidoObrigatorio));
 
         RuleFor(x => x.ProdutoQuantidade)

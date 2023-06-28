@@ -9,6 +9,8 @@
   <ItemGroup>
     <Folder Include="Enum\" />
     <Folder Include="Validations\" />
+    <Folder Include="Filtros\Base\" />
+    <Folder Include="Filtros\Pedido\" />
     <Folder Include="Interfaces\Integracoes\" />
   </ItemGroup>
 
