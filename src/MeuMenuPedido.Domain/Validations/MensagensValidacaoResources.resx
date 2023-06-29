@@ -129,6 +129,12 @@
   <data name="MesaObrigatoria" xml:space="preserve">
     <value>Deve-se obrigatoriamente informar a mesa</value>
   </data>
+  <data name="MesaOcupada" xml:space="preserve">
+    <value>A mesa já está ocupada</value>
+  </data>
+  <data name="MesaNaoIdentificada" xml:space="preserve">
+    <value>A mesa informada não foi identificada</value>
+  </data>
   <data name="QuantidadeDoProdutoDeveSerSuperiorAZero" xml:space="preserve">
     <value>Deve-se informar a quantidade do produto superior a zero</value>
   </data>

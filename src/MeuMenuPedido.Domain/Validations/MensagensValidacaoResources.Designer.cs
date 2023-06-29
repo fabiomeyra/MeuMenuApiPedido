@@ -79,11 +79,29 @@ namespace MeuMenuPedido.Domain.Validations {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A mesa informada não foi identificada.
+        /// </summary>
+        internal static string MesaNaoIdentificada {
+            get {
+                return ResourceManager.GetString("MesaNaoIdentificada", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Deve-se obrigatoriamente informar a mesa.
         /// </summary>
         internal static string MesaObrigatoria {
             get {
                 return ResourceManager.GetString("MesaObrigatoria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A mesa já está ocupada.
+        /// </summary>
+        internal static string MesaOcupada {
+            get {
+                return ResourceManager.GetString("MesaOcupada", resourceCulture);
             }
         }
         

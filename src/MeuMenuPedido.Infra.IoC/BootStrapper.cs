@@ -48,14 +48,17 @@ public static class BootStrapper
         // appServices
         services.AddScoped<IPedidoAppService, PedidoAppService>();
         services.AddScoped<IPedidoProdutoAppService, PedidoProdutoAppService>();
+        services.AddScoped<IMesaPedidoAppService, MesaPedidoAppService>();
 
         // services
         services.AddScoped<IPedidoService, PedidoService>();
         services.AddScoped<IPedidoProdutoService, PedidoProdutoService>();
+        services.AddScoped<IMesaPedidoService, MesaPedidoService>();
 
         // repositories
         services.AddScoped<IPedidoRepository, PedidoRepository>();
         services.AddScoped<IPedidoProdutoRepository, PedidoProdutoRepository>();
+        services.AddScoped<IMesaPedidoRepository, MesaPedidoRepository>();
 
         // integrações
         services.AddScoped<IProdutoApiService, ProdutoApiService>();

@@ -30,7 +30,6 @@ public class PedidoController : BaseController
     /// <param name="id">id do pedido</param>
     /// <returns>Retorna pedido filtrado pelo id informado quando existir ou mensagem(s) de erro(s)</returns>
     [HttpGet("{id:guid}")]
-    [AllowAnonymous]
     public async Task<IActionResult> ObterPorId([FromRoute] Guid id)
     {
         var retorno = await _appService.BuscarPorId(id);
@@ -43,7 +42,6 @@ public class PedidoController : BaseController
     /// <param name="filtro">Filtros a serem aplicados na busca</param>
     /// <returns>Retorna lista de pedidos filtrados de acordo com os valores informados no parâmetro filto ou mensagem(s) de erro(s)</returns>
     [HttpGet("buscar-por-situacao")]
-    [AllowAnonymous]
     public async Task<IActionResult> BuscarPorSituacao([FromQuery] BuscarPedidoPorSituacaoFiltroViewModel filtro)
     {
         var retorno = await _appService.BuscarPorSituacao(filtro);
@@ -55,7 +53,6 @@ public class PedidoController : BaseController
     /// </summary>
     /// <returns>Lista de situações ou mensagem(s) de erro(s)</returns>
     [HttpGet("situacoes")]
-    [AllowAnonymous]
     public IActionResult BuscarSituacoes()
     {
         var retorno = _appService.BuscarSituacoesPedido();
@@ -68,7 +65,6 @@ public class PedidoController : BaseController
     /// <param name="pedido">Pedido a ser cadastrado</param>
     /// <returns>Pedido acrescido de seu identificador ou mensagem(s) de erro</returns>
     [HttpPost]
-    [AllowAnonymous]
     public async Task<IActionResult> Adicionar([FromBody] AdicionarPedidoViewModel pedido)
     {
         var retorno = await _appService.Adicionar(pedido);
