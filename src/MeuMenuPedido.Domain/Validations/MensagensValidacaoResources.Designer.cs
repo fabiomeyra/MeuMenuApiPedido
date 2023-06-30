@@ -22,7 +22,7 @@ namespace MeuMenuPedido.Domain.Validations {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class MensagensValidacaoResources {
+    public class MensagensValidacaoResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace MeuMenuPedido.Domain.Validations {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MeuMenuPedido.Domain.Validations.MensagensValidacaoResources", typeof(MensagensValidacaoResources).Assembly);
@@ -51,7 +51,7 @@ namespace MeuMenuPedido.Domain.Validations {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,16 +63,25 @@ namespace MeuMenuPedido.Domain.Validations {
         /// <summary>
         ///   Looks up a localized string similar to Deve-se informar ao menos um produto no pedido.
         /// </summary>
-        internal static string DeveInformarProdutoNoPedido {
+        public static string DeveInformarProdutoNoPedido {
             get {
                 return ResourceManager.GetString("DeveInformarProdutoNoPedido", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Deve-se informar a situação para o pedido.
+        /// </summary>
+        public static string DeveInformarSituacaoPedido {
+            get {
+                return ResourceManager.GetString("DeveInformarSituacaoPedido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Deve-se obrigatoriamente informar o pedido.
         /// </summary>
-        internal static string IdentificadorDoPedidoObrigatorio {
+        public static string IdentificadorDoPedidoObrigatorio {
             get {
                 return ResourceManager.GetString("IdentificadorDoPedidoObrigatorio", resourceCulture);
             }
@@ -81,7 +90,7 @@ namespace MeuMenuPedido.Domain.Validations {
         /// <summary>
         ///   Looks up a localized string similar to A mesa informada não foi identificada.
         /// </summary>
-        internal static string MesaNaoIdentificada {
+        public static string MesaNaoIdentificada {
             get {
                 return ResourceManager.GetString("MesaNaoIdentificada", resourceCulture);
             }
@@ -90,7 +99,7 @@ namespace MeuMenuPedido.Domain.Validations {
         /// <summary>
         ///   Looks up a localized string similar to Deve-se obrigatoriamente informar a mesa.
         /// </summary>
-        internal static string MesaObrigatoria {
+        public static string MesaObrigatoria {
             get {
                 return ResourceManager.GetString("MesaObrigatoria", resourceCulture);
             }
@@ -99,7 +108,7 @@ namespace MeuMenuPedido.Domain.Validations {
         /// <summary>
         ///   Looks up a localized string similar to A mesa já está ocupada.
         /// </summary>
-        internal static string MesaOcupada {
+        public static string MesaOcupada {
             get {
                 return ResourceManager.GetString("MesaOcupada", resourceCulture);
             }
@@ -108,7 +117,7 @@ namespace MeuMenuPedido.Domain.Validations {
         /// <summary>
         ///   Looks up a localized string similar to Não foi possível identificar o pedido.
         /// </summary>
-        internal static string PedidoNaoEncontrado {
+        public static string PedidoNaoEncontrado {
             get {
                 return ResourceManager.GetString("PedidoNaoEncontrado", resourceCulture);
             }
@@ -117,7 +126,7 @@ namespace MeuMenuPedido.Domain.Validations {
         /// <summary>
         ///   Looks up a localized string similar to Não é possível alterar a situação de pedido que está pago ou cancelado.
         /// </summary>
-        internal static string PedidoPagoOuCanceladoNaoPodeMudarSituacao {
+        public static string PedidoPagoOuCanceladoNaoPodeMudarSituacao {
             get {
                 return ResourceManager.GetString("PedidoPagoOuCanceladoNaoPodeMudarSituacao", resourceCulture);
             }
@@ -126,7 +135,7 @@ namespace MeuMenuPedido.Domain.Validations {
         /// <summary>
         ///   Looks up a localized string similar to O produto informado não foi localizado no serviço de produtos, favor verificar e tentar novamente.
         /// </summary>
-        internal static string ProdutoNaoLocalizado {
+        public static string ProdutoNaoLocalizado {
             get {
                 return ResourceManager.GetString("ProdutoNaoLocalizado", resourceCulture);
             }
@@ -135,7 +144,7 @@ namespace MeuMenuPedido.Domain.Validations {
         /// <summary>
         ///   Looks up a localized string similar to Deve-se obrigatoriamente informar o produto.
         /// </summary>
-        internal static string ProdutoObrigatorio {
+        public static string ProdutoObrigatorio {
             get {
                 return ResourceManager.GetString("ProdutoObrigatorio", resourceCulture);
             }
@@ -144,7 +153,7 @@ namespace MeuMenuPedido.Domain.Validations {
         /// <summary>
         ///   Looks up a localized string similar to Deve-se informar a quantidade do produto superior a zero.
         /// </summary>
-        internal static string QuantidadeDoProdutoDeveSerSuperiorAZero {
+        public static string QuantidadeDoProdutoDeveSerSuperiorAZero {
             get {
                 return ResourceManager.GetString("QuantidadeDoProdutoDeveSerSuperiorAZero", resourceCulture);
             }
@@ -153,7 +162,7 @@ namespace MeuMenuPedido.Domain.Validations {
         /// <summary>
         ///   Looks up a localized string similar to A situação informada para o pedido é inválida.
         /// </summary>
-        internal static string SituacaoPedidoInvalida {
+        public static string SituacaoPedidoInvalida {
             get {
                 return ResourceManager.GetString("SituacaoPedidoInvalida", resourceCulture);
             }
@@ -162,7 +171,7 @@ namespace MeuMenuPedido.Domain.Validations {
         /// <summary>
         ///   Looks up a localized string similar to O usuário não possui permissão para executar essa ação.
         /// </summary>
-        internal static string UsuarioSemPermissao {
+        public static string UsuarioSemPermissao {
             get {
                 return ResourceManager.GetString("UsuarioSemPermissao", resourceCulture);
             }

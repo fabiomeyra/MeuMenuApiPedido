@@ -1,4 +1,4 @@
-﻿namespace MeuMenuPedido.Application.ViewModels;
+﻿namespace MeuMenuPedido.Application.ViewModels.Pedido;
 
 public class AlterarSituacaoPedidoViewModel
 {

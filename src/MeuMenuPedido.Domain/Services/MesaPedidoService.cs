@@ -19,7 +19,7 @@ public class MesaPedidoService : BaseService<MesaPedido>, IMesaPedidoService
 
     public async Task<bool> PodeAbrirMesaPedidoNaMesa(int numeroMesa)
     {
-        var mesaOcupada = await Obter(x => x.MesaPedidoNumero == numeroMesa, x => true);
+        var mesaOcupada = await Obter(x => x.MesaPedidoNumero == numeroMesa, x => true, true);
         return !mesaOcupada;
     }
 

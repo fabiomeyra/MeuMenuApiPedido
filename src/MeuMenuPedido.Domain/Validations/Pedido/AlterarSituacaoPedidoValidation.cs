@@ -15,11 +15,7 @@ public class AlterarSituacaoPedidoValidation : AbstractValidator<Models.Pedido>
 
         RuleFor(x => x.SituacaoPedidoId)
             .Must(x => x is > 0 && System.Enum.IsDefined(typeof(SituacaoPedidoEnum), x))
-            .WithMessage(RetornaMensagemFormatado(MensagensValidacaoResources.PedidoPagoOuCanceladoNaoPodeMudarSituacao));
-
-        RuleFor(x => x.SituacaoPedidoId)
-            .Must(x => x is > 0 && System.Enum.IsDefined(typeof(SituacaoPedidoEnum), x))
-            .WithMessage(RetornaMensagemFormatado(MensagensValidacaoResources.PedidoPagoOuCanceladoNaoPodeMudarSituacao));
+            .WithMessage(RetornaMensagemFormatado(MensagensValidacaoResources.DeveInformarSituacaoPedido));
 
         RuleFor(x => x)
             .Must(x => SituacaoDiferenteDePagoECancelado(x.SituacaoPedidoId) || x.UsuarioPodeFinalizarPedido(usuarioLogadoService))

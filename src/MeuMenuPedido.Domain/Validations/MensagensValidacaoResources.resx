@@ -126,6 +126,9 @@
   <data name="DeveInformarProdutoNoPedido" xml:space="preserve">
     <value>Deve-se informar ao menos um produto no pedido</value>
   </data>
+  <data name="DeveInformarSituacaoPedido" xml:space="preserve">
+    <value>Deve-se informar a situação para o pedido</value>
+  </data>
   <data name="MesaObrigatoria" xml:space="preserve">
     <value>Deve-se obrigatoriamente informar a mesa</value>
   </data>
